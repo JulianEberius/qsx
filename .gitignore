@@ -1,0 +1,9 @@
+build
+.ropeproject
+*.pyc
+PYSMELLTAGS
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+*.swp
+.codeintel

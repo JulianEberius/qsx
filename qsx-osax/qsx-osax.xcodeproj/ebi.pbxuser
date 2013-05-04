@@ -1,0 +1,150 @@
+// !$*UTF8*$!
+{
+	040CAD8A1358BC480086CA4C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D6ACBE9E117B7D5600F6691C /* AweSXInjector.m */;
+		name = "AweSXInjector.m: 22";
+		rLen = 0;
+		rLoc = 731;
+		rType = 0;
+		vrLen = 731;
+		vrLoc = 0;
+	};
+	040CAD8C1358BC480086CA4C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D6ACBEA4117B7D6100F6691C /* AweSXInjector.sdef */;
+		name = "AweSXInjector.sdef: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 359;
+		vrLoc = 0;
+	};
+	0496BA0A13587FF200E98C6C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	0496BA0B13587FF200E98C6C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	04D0C9C513660A1900F12AD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D6ACBEA4117B7D6100F6691C /* AweSXInjector.sdef */;
+		name = "AweSXInjector.sdef: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 490;
+		vrLoc = 0;
+	};
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = 8D57630D048677EA00EA77CD /* AweSX.osax */;
+		codeSenseManager = 0496BA0B13587FF200E98C6C /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					463,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					439,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					423,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 325454355;
+			PBXWorkspaceStateSaveDate = 325454355;
+		};
+		perUserProjectItems = {
+			040CAD8A1358BC480086CA4C /* PBXTextBookmark */ = 040CAD8A1358BC480086CA4C /* PBXTextBookmark */;
+			040CAD8C1358BC480086CA4C /* PBXTextBookmark */ = 040CAD8C1358BC480086CA4C /* PBXTextBookmark */;
+			04D0C9C513660A1900F12AD2 /* PBXTextBookmark */ = 04D0C9C513660A1900F12AD2 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 0496BA0A13587FF200E98C6C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D57630D048677EA00EA77CD /* AweSX.osax */ = {
+		activeExec = 0;
+	};
+	D6ACBE9E117B7D5600F6691C /* AweSXInjector.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {796, 654}}";
+			sepNavSelRange = "{731, 0}";
+			sepNavVisRange = "{0, 731}";
+			sepNavWindowFrame = "{{815, 178}, {1008, 866}}";
+		};
+	};
+	D6ACBEA4117B7D6100F6691C /* AweSXInjector.sdef */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {824, 302}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 490}";
+		};
+	};
+}

@@ -1,0 +1,221 @@
+// !$*UTF8*$!
+{
+	043FE372116DEF7500754F59 /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {663, 855}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{183, 806}";
+		};
+	};
+	043FE373116DEF7500754F59 /* main.py */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {621, 330}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{13, 426}";
+		};
+	};
+	04C95D8B1367167E0017F3ED /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIconFile,
+		);
+		name = /Users/ebi/dev/aweSX/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	04D0C94B1366097800F12AD2 /* AweSX */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = AweSX;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	04D0C9791366097C00F12AD2 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	04D0C97A1366097C00F12AD2 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	04D0CC101366124400F12AD2 /* layouts.py */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {564, 1125}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{19, 526}";
+		};
+	};
+	04D0CC51136617A300F12AD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7790198E0C07548A00326F66 /* AweSXAppDelegate.py */;
+		name = "AweSXAppDelegate.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 351;
+		vrLoc = 0;
+	};
+	04D0CC52136617A300F12AD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 043FE372116DEF7500754F59 /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 183;
+	};
+	04D0CC53136617A300F12AD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 04D0CC101366124400F12AD2 /* layouts.py */;
+		name = "layouts.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 526;
+		vrLoc = 19;
+	};
+	04D0CC54136617A300F12AD2 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 043FE373116DEF7500754F59 /* main.py */;
+		name = "main.py: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 426;
+		vrLoc = 13;
+	};
+	04D0CC56136617A300F12AD2 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleIconFile,
+		);
+		name = /Users/ebi/dev/AweSX/Info.plist;
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 04D0C94B1366097800F12AD2 /* AweSX */;
+		activeTarget = 8D1107260486CEB800E47090 /* AweSX */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* AweSX */,
+		);
+		codeSenseManager = 04D0C97A1366097C00F12AD2 /* Code sense */;
+		executables = (
+			04D0C94B1366097800F12AD2 /* AweSX */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					386,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					346,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 325522554;
+			PBXWorkspaceStateSaveDate = 325522554;
+		};
+		perUserProjectItems = {
+			04C95D8B1367167E0017F3ED /* PlistBookmark */ = 04C95D8B1367167E0017F3ED /* PlistBookmark */;
+			04D0CC51136617A300F12AD2 /* PBXTextBookmark */ = 04D0CC51136617A300F12AD2 /* PBXTextBookmark */;
+			04D0CC52136617A300F12AD2 /* PBXTextBookmark */ = 04D0CC52136617A300F12AD2 /* PBXTextBookmark */;
+			04D0CC53136617A300F12AD2 /* PBXTextBookmark */ = 04D0CC53136617A300F12AD2 /* PBXTextBookmark */;
+			04D0CC54136617A300F12AD2 /* PBXTextBookmark */ = 04D0CC54136617A300F12AD2 /* PBXTextBookmark */;
+			04D0CC56136617A300F12AD2 /* PlistBookmark */ = 04D0CC56136617A300F12AD2 /* PlistBookmark */;
+		};
+		sourceControlManager = 04D0C9791366097C00F12AD2 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	7790198E0C07548A00326F66 /* AweSXAppDelegate.py */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {586, 555}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 351}";
+		};
+	};
+	8D1107260486CEB800E47090 /* AweSX */ = {
+		activeExec = 0;
+		executables = (
+			04D0C94B1366097800F12AD2 /* AweSX */,
+		);
+	};
+	8D1107310486CEB800E47090 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 307}, {1008, 866}}";
+		};
+	};
+}

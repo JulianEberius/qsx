@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		040029F4136C656300D44C09 /* aem in Resources */ = {isa = PBXBuildFile; fileRef = 040029EE136C656300D44C09 /* aem */; };
+		040029F5136C656300D44C09 /* appscript in Resources */ = {isa = PBXBuildFile; fileRef = 040029EF136C656300D44C09 /* appscript */; };
+		040029F6136C656300D44C09 /* mactypes.py in Resources */ = {isa = PBXBuildFile; fileRef = 040029F0136C656300D44C09 /* mactypes.py */; };
+		040029F7136C656300D44C09 /* osax.py in Resources */ = {isa = PBXBuildFile; fileRef = 040029F1136C656300D44C09 /* osax.py */; };
+		041EBA011690E6000072E503 /* qtileadapter.py in Resources */ = {isa = PBXBuildFile; fileRef = 041EBA001690E6000072E503 /* qtileadapter.py */; };
+		041F052714F19FA5009C0F89 /* utils.py in Resources */ = {isa = PBXBuildFile; fileRef = 041F052614F19FA5009C0F89 /* utils.py */; };
+		04232FD91367F507009B585B /* SGHotKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 0451957013675F3B005B6132 /* SGHotKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04232FDA1367F507009B585B /* SGHotKeyCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0451957213675F3B005B6132 /* SGHotKeyCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04232FDB1367F507009B585B /* SGKeyCodeTranslator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0451957413675F3B005B6132 /* SGKeyCodeTranslator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04232FDC1367F507009B585B /* SGKeyCombo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0451957613675F3B005B6132 /* SGKeyCombo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0428DE8316C7EBC400CEB09C /* qsx.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0428DE8116C7EBC400CEB09C /* qsx.icns */; };
+		0428DE8416C7EBC400CEB09C /* qsx.png in Resources */ = {isa = PBXBuildFile; fileRef = 0428DE8216C7EBC400CEB09C /* qsx.png */; };
+		0435EA6D136C69BA00CB55A6 /* SGHotKey-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0435EA69136C69BA00CB55A6 /* SGHotKey-Info.plist */; };
+		043BB20016625F9F00292585 /* apple_linen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 043BB1FF16625F9F00292585 /* apple_linen.jpg */; };
+		045195BA136763EB005B6132 /* SGHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451957113675F3B005B6132 /* SGHotKey.m */; };
+		045195BC136763EB005B6132 /* SGHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451957313675F3B005B6132 /* SGHotKeyCenter.m */; };
+		045195BE136763EB005B6132 /* SGKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451957513675F3B005B6132 /* SGKeyCodeTranslator.m */; };
+		045195C0136763EB005B6132 /* SGKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451957713675F3B005B6132 /* SGKeyCombo.m */; };
+		045195C31367641D005B6132 /* SGHotKey.framework in Copy Files Frameworks */ = {isa = PBXBuildFile; fileRef = 045195AB136763B4005B6132 /* SGHotKey.framework */; };
+		045A0D171735A91100918237 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 045A0D161735A91100918237 /* main.py */; };
+		049CA06615B0BD0800CBCBA1 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CA06415B0BD0000CBCBA1 /* Python.framework */; };
+		049CA06715B0BD0800CBCBA1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CA06215B0BCFA00CBCBA1 /* Carbon.framework */; };
+		049CA06815B0BD0800CBCBA1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CA06015B0BCED00CBCBA1 /* Cocoa.framework */; };
+		049CA06915B0BD6300CBCBA1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CA06215B0BCFA00CBCBA1 /* Carbon.framework */; };
+		049CA06A15B0BD6300CBCBA1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CA06015B0BCED00CBCBA1 /* Cocoa.framework */; };
+		04B0C22E14EEB925006746A1 /* hotkeys.py in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C22D14EEB925006746A1 /* hotkeys.py */; };
+		04CBFAAE17358421007A5864 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA317358421007A5864 /* __init__.py */; };
+		04CBFAAF17358421007A5864 /* base.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA417358421007A5864 /* base.py */; };
+		04CBFAB017358421007A5864 /* floating.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA517358421007A5864 /* floating.py */; };
+		04CBFAB117358421007A5864 /* max.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA617358421007A5864 /* max.py */; };
+		04CBFAB217358421007A5864 /* ratiotile.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA717358421007A5864 /* ratiotile.py */; };
+		04CBFAB317358421007A5864 /* slice.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA817358421007A5864 /* slice.py */; };
+		04CBFAB417358421007A5864 /* stack.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA917358421007A5864 /* stack.py */; };
+		04CBFAB517358421007A5864 /* tile.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAAA17358421007A5864 /* tile.py */; };
+		04CBFAB617358421007A5864 /* tree.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAAB17358421007A5864 /* tree.py */; };
+		04CBFAB717358421007A5864 /* xmonad.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAAC17358421007A5864 /* xmonad.py */; };
+		04CBFAB817358421007A5864 /* zoomy.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAAD17358421007A5864 /* zoomy.py */; };
+		04CBFABC17358429007A5864 /* app_delegate.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAB917358429007A5864 /* app_delegate.py */; };
+		04CBFABD17358429007A5864 /* models.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFABA17358429007A5864 /* models.py */; };
+		04CBFABE17358429007A5864 /* qsx.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFABB17358429007A5864 /* qsx.py */; };
+		04CFEC5917344A5900DD34D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFEC5117344A5900DD34D2 /* main.m */; };
+		04CFEC5A17344A5900DD34D2 /* QSXOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFEC5417344A5900DD34D2 /* QSXOverlay.m */; };
+		04CFEC5B17344A5900DD34D2 /* QSXWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFEC5617344A5900DD34D2 /* QSXWindow.m */; };
+		04CFEC5C17344A5900DD34D2 /* QSXWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFEC5817344A5900DD34D2 /* QSXWindowManager.m */; };
+		77C8C1F90C07829500965286 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C8C1F70C07829500965286 /* MainMenu.xib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		045195C113676410005B6132 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 045195AA136763B4005B6132;
+			remoteInfo = SGHotKey;
+		};
+		04EF732A16C7E7FB000E3EDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04EF732616C7E7FA000E3EDF /* qsx-osax.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D576316048677EA00EA77CD;
+			remoteInfo = AweSX.osax;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04C6B2B5136607810009D40E /* Copy Files Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				045195C31367641D005B6132 /* SGHotKey.framework in Copy Files Frameworks */,
+			);
+			name = "Copy Files Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		040029EE136C656300D44C09 /* aem */ = {isa = PBXFileReference; lastKnownFileType = folder; name = aem; path = python_libs/aem; sourceTree = "<group>"; };
+		040029EF136C656300D44C09 /* appscript */ = {isa = PBXFileReference; lastKnownFileType = folder; name = appscript; path = python_libs/appscript; sourceTree = "<group>"; };
+		040029F0136C656300D44C09 /* mactypes.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = mactypes.py; path = python_libs/mactypes.py; sourceTree = "<group>"; };
+		040029F1136C656300D44C09 /* osax.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = osax.py; path = python_libs/osax.py; sourceTree = "<group>"; };
+		04193EB2136C6F6F00A5AE4D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		041EBA001690E6000072E503 /* qtileadapter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = qtileadapter.py; path = src/qtileadapter.py; sourceTree = "<group>"; };
+		041F052614F19FA5009C0F89 /* utils.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = utils.py; path = src/utils.py; sourceTree = "<group>"; };
+		0428DE8116C7EBC400CEB09C /* qsx.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = qsx.icns; path = Resources/qsx.icns; sourceTree = "<group>"; };
+		0428DE8216C7EBC400CEB09C /* qsx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = qsx.png; path = Resources/qsx.png; sourceTree = "<group>"; };
+		0435EA69136C69BA00CB55A6 /* SGHotKey-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SGHotKey-Info.plist"; path = "Libraries/SGHotKey-Info.plist"; sourceTree = "<group>"; };
+		0435EA6A136C69BA00CB55A6 /* SGHotKey-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SGHotKey-Prefix.pch"; path = "Libraries/SGHotKey-Prefix.pch"; sourceTree = "<group>"; };
+		043BB1FF16625F9F00292585 /* apple_linen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = apple_linen.jpg; path = Resources/apple_linen.jpg; sourceTree = "<group>"; };
+		0451957013675F3B005B6132 /* SGHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHotKey.h; sourceTree = "<group>"; };
+		0451957113675F3B005B6132 /* SGHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHotKey.m; sourceTree = "<group>"; };
+		0451957213675F3B005B6132 /* SGHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHotKeyCenter.h; sourceTree = "<group>"; };
+		0451957313675F3B005B6132 /* SGHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHotKeyCenter.m; sourceTree = "<group>"; };
+		0451957413675F3B005B6132 /* SGKeyCodeTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGKeyCodeTranslator.h; sourceTree = "<group>"; };
+		0451957513675F3B005B6132 /* SGKeyCodeTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGKeyCodeTranslator.m; sourceTree = "<group>"; };
+		0451957613675F3B005B6132 /* SGKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGKeyCombo.h; sourceTree = "<group>"; };
+		0451957713675F3B005B6132 /* SGKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGKeyCombo.m; sourceTree = "<group>"; };
+		045195AB136763B4005B6132 /* SGHotKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SGHotKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		045A0D161735A91100918237 /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = main.py; path = src/main.py; sourceTree = "<group>"; };
+		049CA06015B0BCED00CBCBA1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		049CA06215B0BCFA00CBCBA1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
+		049CA06415B0BD0000CBCBA1 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Python.framework; sourceTree = DEVELOPER_DIR; };
+		04B0C22D14EEB925006746A1 /* hotkeys.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = hotkeys.py; path = src/hotkeys.py; sourceTree = "<group>"; };
+		04CBFAA317358421007A5864 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		04CBFAA417358421007A5864 /* base.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = base.py; sourceTree = "<group>"; };
+		04CBFAA517358421007A5864 /* floating.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = floating.py; sourceTree = "<group>"; };
+		04CBFAA617358421007A5864 /* max.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = max.py; sourceTree = "<group>"; };
+		04CBFAA717358421007A5864 /* ratiotile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ratiotile.py; sourceTree = "<group>"; };
+		04CBFAA817358421007A5864 /* slice.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = slice.py; sourceTree = "<group>"; };
+		04CBFAA917358421007A5864 /* stack.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = stack.py; sourceTree = "<group>"; };
+		04CBFAAA17358421007A5864 /* tile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = tile.py; sourceTree = "<group>"; };
+		04CBFAAB17358421007A5864 /* tree.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = tree.py; sourceTree = "<group>"; };
+		04CBFAAC17358421007A5864 /* xmonad.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = xmonad.py; sourceTree = "<group>"; };
+		04CBFAAD17358421007A5864 /* zoomy.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = zoomy.py; sourceTree = "<group>"; };
+		04CBFAB917358429007A5864 /* app_delegate.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = app_delegate.py; path = src/app_delegate.py; sourceTree = "<group>"; };
+		04CBFABA17358429007A5864 /* models.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = models.py; path = src/models.py; sourceTree = "<group>"; };
+		04CBFABB17358429007A5864 /* qsx.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = qsx.py; path = src/qsx.py; sourceTree = "<group>"; };
+		04CFEC5017344A5900DD34D2 /* CGSPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGSPrivate.h; sourceTree = "<group>"; };
+		04CFEC5117344A5900DD34D2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04CFEC5217344A5900DD34D2 /* qsx_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qsx_Prefix.pch; sourceTree = "<group>"; };
+		04CFEC5317344A5900DD34D2 /* QSXOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSXOverlay.h; sourceTree = "<group>"; };
+		04CFEC5417344A5900DD34D2 /* QSXOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSXOverlay.m; sourceTree = "<group>"; };
+		04CFEC5517344A5900DD34D2 /* QSXWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSXWindow.h; sourceTree = "<group>"; };
+		04CFEC5617344A5900DD34D2 /* QSXWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSXWindow.m; sourceTree = "<group>"; };
+		04CFEC5717344A5900DD34D2 /* QSXWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSXWindowManager.h; sourceTree = "<group>"; };
+		04CFEC5817344A5900DD34D2 /* QSXWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSXWindowManager.m; sourceTree = "<group>"; };
+		04EF732616C7E7FA000E3EDF /* qsx-osax.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "qsx-osax.xcodeproj"; path = "qsx-osax/qsx-osax.xcodeproj"; sourceTree = "<group>"; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		77C8C1F80C07829500965286 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* qsx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qsx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		045195A7136763B4005B6132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049CA06915B0BD6300CBCBA1 /* Carbon.framework in Frameworks */,
+				049CA06A15B0BD6300CBCBA1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049CA06615B0BD0800CBCBA1 /* Python.framework in Frameworks */,
+				049CA06715B0BD0800CBCBA1 /* Carbon.framework in Frameworks */,
+				049CA06815B0BD0800CBCBA1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04193EA5136C6D2E00A5AE4D /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				0451956F13675F3B005B6132 /* SGHotKeysLib */,
+				0435EA69136C69BA00CB55A6 /* SGHotKey-Info.plist */,
+				0435EA6A136C69BA00CB55A6 /* SGHotKey-Prefix.pch */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		0451956F13675F3B005B6132 /* SGHotKeysLib */ = {
+			isa = PBXGroup;
+			children = (
+				0451957013675F3B005B6132 /* SGHotKey.h */,
+				0451957113675F3B005B6132 /* SGHotKey.m */,
+				0451957213675F3B005B6132 /* SGHotKeyCenter.h */,
+				0451957313675F3B005B6132 /* SGHotKeyCenter.m */,
+				0451957413675F3B005B6132 /* SGKeyCodeTranslator.h */,
+				0451957513675F3B005B6132 /* SGKeyCodeTranslator.m */,
+				0451957613675F3B005B6132 /* SGKeyCombo.h */,
+				0451957713675F3B005B6132 /* SGKeyCombo.m */,
+			);
+			name = SGHotKeysLib;
+			path = Libraries/SGHotKeysLib/SGHotKeysLib;
+			sourceTree = "<group>";
+		};
+		045783FD1358AA4B0059BA1F /* PythonLibs */ = {
+			isa = PBXGroup;
+			children = (
+				040029EE136C656300D44C09 /* aem */,
+				040029EF136C656300D44C09 /* appscript */,
+				040029F0136C656300D44C09 /* mactypes.py */,
+				040029F1136C656300D44C09 /* osax.py */,
+			);
+			name = PythonLibs;
+			sourceTree = "<group>";
+		};
+		04CBFAA217358421007A5864 /* layouts */ = {
+			isa = PBXGroup;
+			children = (
+				04CBFAA317358421007A5864 /* __init__.py */,
+				04CBFAA417358421007A5864 /* base.py */,
+				04CBFAA517358421007A5864 /* floating.py */,
+				04CBFAA617358421007A5864 /* max.py */,
+				04CBFAA717358421007A5864 /* ratiotile.py */,
+				04CBFAA817358421007A5864 /* slice.py */,
+				04CBFAA917358421007A5864 /* stack.py */,
+				04CBFAAA17358421007A5864 /* tile.py */,
+				04CBFAAB17358421007A5864 /* tree.py */,
+				04CBFAAC17358421007A5864 /* xmonad.py */,
+				04CBFAAD17358421007A5864 /* zoomy.py */,
+			);
+			name = layouts;
+			path = src/layouts;
+			sourceTree = "<group>";
+		};
+		04CFEC4F17344A5900DD34D2 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				04CFEC5017344A5900DD34D2 /* CGSPrivate.h */,
+				04CFEC5117344A5900DD34D2 /* main.m */,
+				04CFEC5217344A5900DD34D2 /* qsx_Prefix.pch */,
+				04CFEC5317344A5900DD34D2 /* QSXOverlay.h */,
+				04CFEC5417344A5900DD34D2 /* QSXOverlay.m */,
+				04CFEC5517344A5900DD34D2 /* QSXWindow.h */,
+				04CFEC5617344A5900DD34D2 /* QSXWindow.m */,
+				04CFEC5717344A5900DD34D2 /* QSXWindowManager.h */,
+				04CFEC5817344A5900DD34D2 /* QSXWindowManager.m */,
+			);
+			name = objc;
+			path = src/objc;
+			sourceTree = "<group>";
+		};
+		04EF732716C7E7FA000E3EDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04EF732B16C7E7FB000E3EDF /* qsx.osax */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				045A0D161735A91100918237 /* main.py */,
+				04CBFAA217358421007A5864 /* layouts */,
+				04CFEC4F17344A5900DD34D2 /* objc */,
+				041EBA001690E6000072E503 /* qtileadapter.py */,
+				041F052614F19FA5009C0F89 /* utils.py */,
+				04B0C22D14EEB925006746A1 /* hotkeys.py */,
+				04CBFAB917358429007A5864 /* app_delegate.py */,
+				04CBFABA17358429007A5864 /* models.py */,
+				04CBFABB17358429007A5864 /* qsx.py */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				049CA06415B0BD0000CBCBA1 /* Python.framework */,
+				049CA06215B0BCFA00CBCBA1 /* Carbon.framework */,
+				049CA06015B0BCED00CBCBA1 /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* qsx.app */,
+				045195AB136763B4005B6132 /* SGHotKey.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* AweSX */ = {
+			isa = PBXGroup;
+			children = (
+				04EF732616C7E7FA000E3EDF /* qsx-osax.xcodeproj */,
+				04193EA5136C6D2E00A5AE4D /* Libraries */,
+				045783FD1358AA4B0059BA1F /* PythonLibs */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = AweSX;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97317FDCFA39411CA2CEA /* Resources */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0428DE8116C7EBC400CEB09C /* qsx.icns */,
+				0428DE8216C7EBC400CEB09C /* qsx.png */,
+				043BB1FF16625F9F00292585 /* apple_linen.jpg */,
+				04193EB2136C6F6F00A5AE4D /* Info.plist */,
+				77C8C1F70C07829500965286 /* MainMenu.xib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		045195A8136763B4005B6132 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04232FD91367F507009B585B /* SGHotKey.h in Headers */,
+				04232FDA1367F507009B585B /* SGHotKeyCenter.h in Headers */,
+				04232FDB1367F507009B585B /* SGKeyCodeTranslator.h in Headers */,
+				04232FDC1367F507009B585B /* SGKeyCombo.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		045195AA136763B4005B6132 /* SGHotKey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 045195B6136763B4005B6132 /* Build configuration list for PBXNativeTarget "SGHotKey" */;
+			buildPhases = (
+				045195A6136763B4005B6132 /* Sources */,
+				045195A7136763B4005B6132 /* Frameworks */,
+				045195A8136763B4005B6132 /* Headers */,
+				045195A9136763B4005B6132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SGHotKey;
+			productName = SGHotKey;
+			productReference = 045195AB136763B4005B6132 /* SGHotKey.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8D1107260486CEB800E47090 /* qsx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "qsx" */;
+			buildPhases = (
+				04C6B2B5136607810009D40E /* Copy Files Frameworks */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				045195C213676410005B6132 /* PBXTargetDependency */,
+			);
+			name = qsx;
+			productInstallPath = "$(HOME)/Applications";
+			productName = AweSX;
+			productReference = 8D1107320486CEB800E47090 /* qsx.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "qsx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* AweSX */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 04EF732716C7E7FA000E3EDF /* Products */;
+					ProjectRef = 04EF732616C7E7FA000E3EDF /* qsx-osax.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* qsx */,
+				045195AA136763B4005B6132 /* SGHotKey */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		04EF732B16C7E7FB000E3EDF /* qsx.osax */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = qsx.osax;
+			remoteRef = 04EF732A16C7E7FB000E3EDF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		045195A9136763B4005B6132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				77C8C1F90C07829500965286 /* MainMenu.xib in Resources */,
+				040029F4136C656300D44C09 /* aem in Resources */,
+				040029F5136C656300D44C09 /* appscript in Resources */,
+				040029F6136C656300D44C09 /* mactypes.py in Resources */,
+				040029F7136C656300D44C09 /* osax.py in Resources */,
+				0435EA6D136C69BA00CB55A6 /* SGHotKey-Info.plist in Resources */,
+				04B0C22E14EEB925006746A1 /* hotkeys.py in Resources */,
+				041F052714F19FA5009C0F89 /* utils.py in Resources */,
+				043BB20016625F9F00292585 /* apple_linen.jpg in Resources */,
+				041EBA011690E6000072E503 /* qtileadapter.py in Resources */,
+				0428DE8316C7EBC400CEB09C /* qsx.icns in Resources */,
+				0428DE8416C7EBC400CEB09C /* qsx.png in Resources */,
+				04CBFAAE17358421007A5864 /* __init__.py in Resources */,
+				04CBFAAF17358421007A5864 /* base.py in Resources */,
+				04CBFAB017358421007A5864 /* floating.py in Resources */,
+				04CBFAB117358421007A5864 /* max.py in Resources */,
+				04CBFAB217358421007A5864 /* ratiotile.py in Resources */,
+				04CBFAB317358421007A5864 /* slice.py in Resources */,
+				04CBFAB417358421007A5864 /* stack.py in Resources */,
+				04CBFAB517358421007A5864 /* tile.py in Resources */,
+				04CBFAB617358421007A5864 /* tree.py in Resources */,
+				04CBFAB717358421007A5864 /* xmonad.py in Resources */,
+				04CBFAB817358421007A5864 /* zoomy.py in Resources */,
+				04CBFABC17358429007A5864 /* app_delegate.py in Resources */,
+				04CBFABD17358429007A5864 /* models.py in Resources */,
+				04CBFABE17358429007A5864 /* qsx.py in Resources */,
+				045A0D171735A91100918237 /* main.py in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		045195A6136763B4005B6132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				045195BA136763EB005B6132 /* SGHotKey.m in Sources */,
+				045195BC136763EB005B6132 /* SGHotKeyCenter.m in Sources */,
+				045195BE136763EB005B6132 /* SGKeyCodeTranslator.m in Sources */,
+				045195C0136763EB005B6132 /* SGKeyCombo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04CFEC5917344A5900DD34D2 /* main.m in Sources */,
+				04CFEC5A17344A5900DD34D2 /* QSXOverlay.m in Sources */,
+				04CFEC5B17344A5900DD34D2 /* QSXWindow.m in Sources */,
+				04CFEC5C17344A5900DD34D2 /* QSXWindowManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		045195C213676410005B6132 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 045195AA136763B4005B6132 /* SGHotKey */;
+			targetProxy = 045195C113676410005B6132 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		77C8C1F70C07829500965286 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77C8C1F80C07829500965286 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		045195B7136763B4005B6132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Libraries/SGHotKey-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Libraries/SGHotKey-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		045195B8136763B4005B6132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Libraries/SGHotKey-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Libraries/SGHotKey-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = src/objc/qsx_Prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = qsx;
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = src/objc/qsx_Prefix.pch;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = qsx;
+				SDKROOT = macosx10.7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.7;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				SDKROOT = macosx10.7;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		045195B6136763B4005B6132 /* Build configuration list for PBXNativeTarget "SGHotKey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				045195B7136763B4005B6132 /* Debug */,
+				045195B8136763B4005B6132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "qsx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "qsx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

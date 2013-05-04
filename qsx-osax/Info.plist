@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIdentifier</key>
+	<string>de.eberius-mail.qsx-osax</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>QSXInjector</string>
+	<key>CFBundlePackageType</key>
+	<string>osax</string>
+	<key>CFBundleShortVersionString</key>
+	<string>##VERSION##</string>
+	<key>CFBundleVersion</key>
+	<string>##VERSION##</string>
+	<key>OSAScriptingDefinition</key>
+	<string>QSXInjector.sdef</string>
+	<key>OSAXHandlers</key>
+	<dict>
+		<key>Events</key>
+		<dict>
+			<key>QSXXinjc</key>
+			<dict>
+				<key>Context</key>
+				<string>Process</string>
+				<key>Handler</key>
+				<string>InjectQSX</string>
+				<key>ThreadSafe</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

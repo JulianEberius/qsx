@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="qsx Terminology">
+    <suite name="qsx Suite" code="QSXX" description="qsx Injector commands">
+        <command name="injectQSX" code="QSXXinjc" description="performs a lot of methods swizzling to make the app QSX compatible"/>
+    </suite>
+</dictionary>
