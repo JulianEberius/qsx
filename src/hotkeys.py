@@ -104,8 +104,8 @@ def init_default_qsx_hotkeys(caller):
     register_key_from_string("alt+ctrl+k", caller, "up:")
     # register_key_from_string("alt+ctrl+h", caller, "previous:")
     # register_key_from_string("alt+ctrl+l", caller, "next:")
-    # register_key_from_string("cmd+alt+ctrl+h", caller, "clientToPrevious:")
-    # register_key_from_string("cmd+alt+ctrl+l", caller, "clientToNext:")
+    register_key_from_string("cmd+alt+ctrl+h", caller, "toNextGroup:")
+    register_key_from_string("cmd+alt+ctrl+l", caller, "toPreviousGroup:")
     register_key_from_string("alt+ctrl+l", caller, "shuffleDown:")
     register_key_from_string("alt+ctrl+h", caller, "shuffleUp:")
 

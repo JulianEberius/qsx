@@ -1,11 +1,11 @@
 import subprocess
-import inspect
 import json
+from contextlib import contextmanager
 from os.path import abspath, expanduser, isfile
-from Foundation import NSNotification, NSNotificationCenter
+from math import ceil
+from Foundation import NSNotificationCenter
 from AppKit import NSBundle, NSFileManager
 from functools import wraps
-
 
 '''
 Configuration
@@ -34,6 +34,14 @@ def load_config():
 Notifications
 '''
 
+SUPRESSED_NOTIFICATIONS = []
+
+@contextmanager
+def supress_notification(notification, obj=None):
+    tup = (notification, obj)
+    SUPRESSED_NOTIFICATIONS.append(tup)
+    yield
+    SUPRESSED_NOTIFICATIONS.remove(tup)
 
 def notify(msg, sender, user_info=None):
     NSNotificationCenter.defaultCenter().postNotificationName_object_userInfo_(msg, sender, user_info)
@@ -43,39 +51,31 @@ def notification_receiver(func):
     domain objects (Windows etc) or domain objects directly. This decorator
     unwraps the objects from notifications.
 
-    NOTE: we cannot use one decorator function with *args here, as the
-    decorated function will have a variadic number of parameters and will
-    not be recognized by PyObjC. We need to return a function with the exact
-    same number of parameters. Surely, there is a better solution using magic.
+    Also checks whether the event is not supressed
     '''
-
     @wraps(func)
-    def decorated_func_1(a1):
-        args = [a.object() if isinstance(a, NSNotification) else a
-                    for a in [a1]]
-        return func(*args)
+    def decorated_func(self, notification):
+        obj = notification.object()
+        tup = notification.name(), obj
+        if tup in SUPRESSED_NOTIFICATIONS:
+            return
+        return func(self, obj)
 
-    @wraps(func)
-    def decorated_func_2(a1, a2):
-        args = [a.object() if isinstance(a, NSNotification) else a
-                    for a in [a1, a2]]
-        return func(*args)
-
-    @wraps(func)
-    def decorated_func_3(a1, a2, a3):
-        args = [a.object() if isinstance(a, NSNotification) else a
-                    for a in [a1, a2, a3]]
-        return func(*args)
-
-    return {
-        1: decorated_func_1,
-        2: decorated_func_2,
-        3: decorated_func_3
-    }.get(len(inspect.getargspec(func)[0]))
+    return decorated_func
 
 '''
 Misc
 '''
+
+def partition(lst, n):
+    partitions = []
+    part_size = ceil(len(lst) / float(n))
+    for i in xrange(n):
+        _from = int(i * part_size)
+        _to = int(min((i + 1) * part_size, len(lst)))
+        partitions.append(lst[_from:_to])
+
+    return partitions
 
 def resource_path(resource, resource_type):
         path = NSBundle.mainBundle().pathForResource_ofType_(

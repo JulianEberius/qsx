@@ -33,17 +33,6 @@
 		049CA06915B0BD6300CBCBA1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CA06215B0BCFA00CBCBA1 /* Carbon.framework */; };
 		049CA06A15B0BD6300CBCBA1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CA06015B0BCED00CBCBA1 /* Cocoa.framework */; };
 		04B0C22E14EEB925006746A1 /* hotkeys.py in Resources */ = {isa = PBXBuildFile; fileRef = 04B0C22D14EEB925006746A1 /* hotkeys.py */; };
-		04CBFAAE17358421007A5864 /* __init__.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA317358421007A5864 /* __init__.py */; };
-		04CBFAAF17358421007A5864 /* base.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA417358421007A5864 /* base.py */; };
-		04CBFAB017358421007A5864 /* floating.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA517358421007A5864 /* floating.py */; };
-		04CBFAB117358421007A5864 /* max.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA617358421007A5864 /* max.py */; };
-		04CBFAB217358421007A5864 /* ratiotile.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA717358421007A5864 /* ratiotile.py */; };
-		04CBFAB317358421007A5864 /* slice.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA817358421007A5864 /* slice.py */; };
-		04CBFAB417358421007A5864 /* stack.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAA917358421007A5864 /* stack.py */; };
-		04CBFAB517358421007A5864 /* tile.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAAA17358421007A5864 /* tile.py */; };
-		04CBFAB617358421007A5864 /* tree.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAAB17358421007A5864 /* tree.py */; };
-		04CBFAB717358421007A5864 /* xmonad.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAAC17358421007A5864 /* xmonad.py */; };
-		04CBFAB817358421007A5864 /* zoomy.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAAD17358421007A5864 /* zoomy.py */; };
 		04CBFABC17358429007A5864 /* app_delegate.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFAB917358429007A5864 /* app_delegate.py */; };
 		04CBFABD17358429007A5864 /* models.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFABA17358429007A5864 /* models.py */; };
 		04CBFABE17358429007A5864 /* qsx.py in Resources */ = {isa = PBXBuildFile; fileRef = 04CBFABB17358429007A5864 /* qsx.py */; };
@@ -51,6 +40,7 @@
 		04CFEC5A17344A5900DD34D2 /* QSXOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFEC5417344A5900DD34D2 /* QSXOverlay.m */; };
 		04CFEC5B17344A5900DD34D2 /* QSXWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFEC5617344A5900DD34D2 /* QSXWindow.m */; };
 		04CFEC5C17344A5900DD34D2 /* QSXWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFEC5817344A5900DD34D2 /* QSXWindowManager.m */; };
+		04EE6F53173708F200BA5198 /* layouts in Resources */ = {isa = PBXBuildFile; fileRef = 04EE6F52173708F200BA5198 /* layouts */; };
 		77C8C1F90C07829500965286 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C8C1F70C07829500965286 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -113,17 +103,6 @@
 		049CA06215B0BCFA00CBCBA1 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
 		049CA06415B0BD0000CBCBA1 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Python.framework; sourceTree = DEVELOPER_DIR; };
 		04B0C22D14EEB925006746A1 /* hotkeys.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = hotkeys.py; path = src/hotkeys.py; sourceTree = "<group>"; };
-		04CBFAA317358421007A5864 /* __init__.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		04CBFAA417358421007A5864 /* base.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = base.py; sourceTree = "<group>"; };
-		04CBFAA517358421007A5864 /* floating.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = floating.py; sourceTree = "<group>"; };
-		04CBFAA617358421007A5864 /* max.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = max.py; sourceTree = "<group>"; };
-		04CBFAA717358421007A5864 /* ratiotile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ratiotile.py; sourceTree = "<group>"; };
-		04CBFAA817358421007A5864 /* slice.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = slice.py; sourceTree = "<group>"; };
-		04CBFAA917358421007A5864 /* stack.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = stack.py; sourceTree = "<group>"; };
-		04CBFAAA17358421007A5864 /* tile.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = tile.py; sourceTree = "<group>"; };
-		04CBFAAB17358421007A5864 /* tree.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = tree.py; sourceTree = "<group>"; };
-		04CBFAAC17358421007A5864 /* xmonad.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = xmonad.py; sourceTree = "<group>"; };
-		04CBFAAD17358421007A5864 /* zoomy.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = zoomy.py; sourceTree = "<group>"; };
 		04CBFAB917358429007A5864 /* app_delegate.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = app_delegate.py; path = src/app_delegate.py; sourceTree = "<group>"; };
 		04CBFABA17358429007A5864 /* models.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = models.py; path = src/models.py; sourceTree = "<group>"; };
 		04CBFABB17358429007A5864 /* qsx.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = qsx.py; path = src/qsx.py; sourceTree = "<group>"; };
@@ -136,6 +115,7 @@
 		04CFEC5617344A5900DD34D2 /* QSXWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSXWindow.m; sourceTree = "<group>"; };
 		04CFEC5717344A5900DD34D2 /* QSXWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSXWindowManager.h; sourceTree = "<group>"; };
 		04CFEC5817344A5900DD34D2 /* QSXWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSXWindowManager.m; sourceTree = "<group>"; };
+		04EE6F52173708F200BA5198 /* layouts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = layouts; path = src/layouts; sourceTree = "<group>"; };
 		04EF732616C7E7FA000E3EDF /* qsx-osax.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "qsx-osax.xcodeproj"; path = "qsx-osax/qsx-osax.xcodeproj"; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -204,25 +184,6 @@
 			name = PythonLibs;
 			sourceTree = "<group>";
 		};
-		04CBFAA217358421007A5864 /* layouts */ = {
-			isa = PBXGroup;
-			children = (
-				04CBFAA317358421007A5864 /* __init__.py */,
-				04CBFAA417358421007A5864 /* base.py */,
-				04CBFAA517358421007A5864 /* floating.py */,
-				04CBFAA617358421007A5864 /* max.py */,
-				04CBFAA717358421007A5864 /* ratiotile.py */,
-				04CBFAA817358421007A5864 /* slice.py */,
-				04CBFAA917358421007A5864 /* stack.py */,
-				04CBFAAA17358421007A5864 /* tile.py */,
-				04CBFAAB17358421007A5864 /* tree.py */,
-				04CBFAAC17358421007A5864 /* xmonad.py */,
-				04CBFAAD17358421007A5864 /* zoomy.py */,
-			);
-			name = layouts;
-			path = src/layouts;
-			sourceTree = "<group>";
-		};
 		04CFEC4F17344A5900DD34D2 /* objc */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,8 +212,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				04EE6F52173708F200BA5198 /* layouts */,
 				045A0D161735A91100918237 /* main.py */,
-				04CBFAA217358421007A5864 /* layouts */,
 				04CFEC4F17344A5900DD34D2 /* objc */,
 				041EBA001690E6000072E503 /* qtileadapter.py */,
 				041F052614F19FA5009C0F89 /* utils.py */,
@@ -461,21 +422,11 @@
 				041EBA011690E6000072E503 /* qtileadapter.py in Resources */,
 				0428DE8316C7EBC400CEB09C /* qsx.icns in Resources */,
 				0428DE8416C7EBC400CEB09C /* qsx.png in Resources */,
-				04CBFAAE17358421007A5864 /* __init__.py in Resources */,
-				04CBFAAF17358421007A5864 /* base.py in Resources */,
-				04CBFAB017358421007A5864 /* floating.py in Resources */,
-				04CBFAB117358421007A5864 /* max.py in Resources */,
-				04CBFAB217358421007A5864 /* ratiotile.py in Resources */,
-				04CBFAB317358421007A5864 /* slice.py in Resources */,
-				04CBFAB417358421007A5864 /* stack.py in Resources */,
-				04CBFAB517358421007A5864 /* tile.py in Resources */,
-				04CBFAB617358421007A5864 /* tree.py in Resources */,
-				04CBFAB717358421007A5864 /* xmonad.py in Resources */,
-				04CBFAB817358421007A5864 /* zoomy.py in Resources */,
 				04CBFABC17358429007A5864 /* app_delegate.py in Resources */,
 				04CBFABD17358429007A5864 /* models.py in Resources */,
 				04CBFABE17358429007A5864 /* qsx.py in Resources */,
 				045A0D171735A91100918237 /* main.py in Resources */,
+				04EE6F53173708F200BA5198 /* layouts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

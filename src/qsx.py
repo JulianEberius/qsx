@@ -2,11 +2,11 @@ import models
 import hotkeys
 import utils
 import osax
-from utils import notification_receiver
-from math import ceil
+from utils import notification_receiver, partition, supress_notification
 from qtileadapter import XMonadLayout, QTileGroupAdapter
 
 from Foundation import NSObject, NSNotificationCenter
+from PyObjCTools.AppHelper import callLater
 
 class QSX(NSObject):
     ''' this is it! the real window manager!'''
@@ -34,8 +34,6 @@ class QSX(NSObject):
             self, "windowDestroyed:", "QSXWindowDestroyed", None)
         NSNotificationCenter.defaultCenter().addObserver_selector_name_object_(
             self, "windowFocusedExternal:", "QSXWindowFocusedExternal", None)
-        NSNotificationCenter.defaultCenter().addObserver_selector_name_object_(
-            self, "windowFocusedInternal:", "QSXWindowFocusedInternal", None)
 
         # new or destroyed apps are handled here
         NSNotificationCenter.defaultCenter().addObserver_selector_name_object_(
@@ -62,68 +60,67 @@ class QSX(NSObject):
         for a in apps:
             a.hide_menu_and_dock(True)
             for w in a.windows:
-                w.toggle_lion_fullscreen()
+                w.hide_lion_fullscreen_button()
         self.injected_apps = apps
 
         screens = models.WindowManager.screens()
-        for s in screens:
-            print s
-            print s.frame().origin.x, s.frame().origin.y
-            print s.frame().size.width, s.frame().size.height
 
         self.groups = []
-        windows_per_screen = ceil(float(len(windows))/len(screens))
-        for i, screen in enumerate(screens):
-            _from = int(i * windows_per_screen)
-            _to = int(min((i + 1) * windows_per_screen, len(windows)))
-            screen_windows = windows[_from:_to]
-            layout = XMonadLayout(screen_windows)
+        window_partitions = partition(windows, len(screens))
+        for windows, screen in zip(window_partitions, screens):
+            layout = XMonadLayout(windows)
             overlay = models.Overlay.alloc().initWithScreen_(screen)
             group = QTileGroupAdapter(layout, screen, overlay)
             self.groups.append(group)
-            layout.apply()
-            for w in layout.windows:
-                print w
+            with supress_notification("QSXLayoutChanged"):
+                layout.apply()
         self.active_group = self.groups[0]
-        self.active_group.focus_first()
+        self.active_group.set_initial_focus()
         models.WindowManager.toggle_shadows(False)
+
+    def update_overlay(self, target_group=None):
+        if target_group is None:
+           target_group = self.active_group
+        for g in self.groups:
+            ov = g.overlay
+            ov.clear()
+            if g == target_group:
+                active_window = g.active_window
+                windows = [w for w in g.layout.windows if w is not active_window]
+                for w in windows:
+                    ov.addBorder_(w.frame)
+                ov.addActiveBorder_(active_window.frame)
+            else:
+                for w in g.layout.windows:
+                    ov.addBorder_(w.frame)
+
 
     @notification_receiver
     def newWindow_(self, window):
         if window.space == self.active_space:
-            self.active_group.layout.add_window(window)
+            if window.subrole == "AXStandardWindow":
+                window.hide_lion_fullscreen_button()
+                self.active_group.layout.add_window(window)
+            # self.active_group.overlay.flashMessage_("New window")
 
     @notification_receiver
     def windowDestroyed_(self, window):
         for g in self.groups:
             if g.layout.contains(window):
                 g.layout.remove_window(window)
-
+                # self.active_group.overlay.flashMessage_("Window destroyed")
 
     @notification_receiver
     def windowFocusedExternal_(self, focused_window):
         for g in self.groups:
             if g.layout.contains(focused_window):
-                print "external focus switch", focused_window
                 g.layout.focus_window(focused_window)
                 self.active_group = g
-
-    @notification_receiver
-    def windowFocusedInternal_(self, focused_window):
-        for g in self.groups:
-            if g.layout.contains(focused_window):
-                self.active_group = g
-
-                ov = self.active_group.overlay
-                ov.clear()
-                windows = [w for w in g.layout.windows if w is not focused_window]
-                for w in windows:
-                    ov.addBorder_(w.frame)
-                ov.addActiveBorder_(focused_window.frame)
+                self.update_overlay()
 
     @notification_receiver
     def layoutChanged_(self, _):
-        pass
+        self.update_overlay()
 
     @notification_receiver
     def newApp_(self, app):
@@ -135,7 +132,7 @@ class QSX(NSObject):
         for w in app.windows:
             if w.space == self.active_space:
                 if w.subrole == "AXStandardWindow":
-                    w.toggle_lion_fullscreen()
+                    w.hide_lion_fullscreen_button()
                     self.active_group.layout.add_window(w)
 
     @notification_receiver
@@ -182,6 +179,35 @@ class QSX(NSObject):
     def next_(self, sender):
         self.active_group.layout.cmd_next()
 
+    def switch_window_to_group(self, window, groupA, groupB):
+        if len(groupA) < 2:
+            return
+        groupA.layout.remove_window(window)
+        groupB.layout.add_window(window)
+        # TODO: calling second focus later is a "cheap" solution, not guaranteed to work
+        def focus_new_group():
+            groupB.layout.focus_window(window)
+            self.active_group = groupB
+        callLater(0.3, focus_new_group)
+
+    def toNextGroup_(self, sender):
+        groupA = self.active_group
+        idx = (self.groups.index(groupA) + 1) % len(self.groups)
+        groupB = self.groups[idx]
+        if groupA == groupB:
+            return
+        window = self.active_group.active_window
+        self.switch_window_to_group(window, groupA, groupB)
+
+    def toPreviousGroup_(self, sender):
+        groupA = self.active_group
+        idx = (self.groups.index(groupA) - 1)% len(self.groups)
+        groupB = self.groups[idx]
+        if groupA == groupB:
+            return
+        window = self.active_group.active_window
+        self.switch_window_to_group(window, groupA, groupB)
+
     def clientToPrevious_(self, sender):
         self.active_group.layout.cmd_client_to_previous()
 
@@ -194,7 +220,7 @@ class QSX(NSObject):
         for g in self.groups:
             for w in g.layout.windows:
                 w.set_static(False)
-                w.toggle_lion_fullscreen()
+                w.hide_lion_fullscreen_button()
 
         still_running_apps = models.WindowManager.still_running(self.injected_apps)
         for a in still_running_apps:

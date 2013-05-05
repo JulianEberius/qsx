@@ -1,6 +1,7 @@
 from layouts.xmonad import MonadTall
 from layouts.stack import Stack
-from utils import notification_receiver, notify
+from utils import notify
+from PyObjCTools.AppHelper import callLater
 
 class QTileGroupAdapter(object):
     """simulates QTile's Group object (=workspace)"""
@@ -35,13 +36,17 @@ class QTileGroupAdapter(object):
         screen_frame = screen.frame();
         self.screen = QTileGroupAdapter.QTileScreen(
             screen_frame.origin.x,
-            screen_frame.origin.y,
+            # screen_frame.origin.y,
+            0,
             screen_frame.size.width,
             screen_frame.size.height)
         self.qtile = QTileGroupAdapter.QTileRootAdapter()
         self.overlay = overlay
         self.overlay.retain()
         self.current_window = None
+
+    def __len__(self):
+        return len(self.layout.windows)
 
     # @property
     # def screen(self):
@@ -51,14 +56,16 @@ class QTileGroupAdapter(object):
     def layoutAll(self):
         self.layout.apply()
 
-    def focus_first(self):
-        next_focus = self.layout.focus_first()
-        self.focus(next_focus, False)
+    @property
+    def active_window(self):
+        return self.layout.focus_first()
+
+    def set_initial_focus(self):
+        self.focus(self.active_window, False)
 
     def focus(self, window, warp):
-        self.current_window = window
+        # focusing the window on OS level will trigger an update throughout QSX
         window.focus()
-        notify("QSXWindowFocusedInternal", window)
 
 class Layout(object):
     """Represents a possible layout of windows on a screen"""
@@ -95,7 +102,6 @@ class QTileLayoutWrapper(Layout):
         coordinates'''
         return (window.x, window.y, window.width, window.height)
 
-
     def contains(self, window):
         for w in self.windows:
             if w == window:
@@ -113,15 +119,16 @@ class QTileLayoutWrapper(Layout):
         return self.qtile_layout.group.current_window
 
     def add_window(self, new_window):
+        # Some apps change their state on new window, force them back
         new_window.set_static(True)
+        new_window.app.hide_menu_and_dock(True)
+
         new_window.layout = self
         self.windows.append(new_window)
         self.qtile_layout.add(new_window)
         self.qtile_layout.focus(new_window)
-        self.apply()
+        self.group.focus(new_window, False)
 
-        # Some apps change their state on new window, force them back
-        new_window.app.hide_menu_and_dock(True)
 
     def remove_window(self, window):
         self.windows.remove(window)
@@ -129,15 +136,18 @@ class QTileLayoutWrapper(Layout):
 
         next_focus = self.qtile_layout.focus_first()
         self.qtile_layout.focus(next_focus)
-        # self.apply()
 
     def focus_first(self):
         return self.qtile_layout.focus_first()
 
+    def set_focused_window(self, window):
+        ''' has to be implemented on subclasses, as the specific
+        state of the respective layouts has to be changed.
+        the existing layout API will also trigger a re-layout '''
+        pass
+
     def focus_window(self, window):
         self.qtile_layout.focus(window)
-        self.group.focus(window, False)
-        # self.apply()
 
     def __getattr__(self, attr):
         ''' deletegate qtile commands to the qtile layout'''

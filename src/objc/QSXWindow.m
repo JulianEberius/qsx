@@ -192,13 +192,13 @@
     // some windows don't resize correctly (e.g. MacVim, Terminal)
     // Asynchronously check, and resize step by step in this case
 
-    NSOperation* op = [[AsyncCheckResizeOperation alloc] initWithQSXWindow:self andTargetSize:windowSize];
-    if ([self currentResizeCheckOperation] != NULL ) {
-        [[self currentResizeCheckOperation] cancel];
-    }
-    [self setCurrentResizeCheckOperation:op];
+    // NSOperation* op = [[AsyncCheckResizeOperation alloc] initWithQSXWindow:self andTargetSize:windowSize];
+    // if ([self currentResizeCheckOperation] != NULL ) {
+    //     [[self currentResizeCheckOperation] cancel];
+    // }
+    // [self setCurrentResizeCheckOperation:op];
 
-    [[[QSXWindowManager sharedManager] queue] addOperation:op];
+    // [[[QSXWindowManager sharedManager] queue] addOperation:op];
 }
 
 - (BOOL)focusWindow {

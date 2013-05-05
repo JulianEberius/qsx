@@ -5,6 +5,10 @@
     This method is (partially) taken from Jonathan 'Wolf' Rentzsch's JRSwizzle,
     which is released under the MIT License. It can be found in the file MIT_LICENSE
 */
+
+
+bool swizzling_done = NO;
+
 bool jr_swizzleMethod(Class clazz, SEL origSel_, SEL altSel_) {
     Method origMethod = class_getInstanceMethod(clazz, origSel_);
     if (!origMethod) {
@@ -243,6 +247,8 @@ void swizzleAccessibilityMethods()
 }
 
 OSErr InjectQSX(const AppleEvent *ev, AppleEvent *reply, long refcon) {
+    if (swizzling_done)
+        return noErr;
 
     swizzleAccessibilityMethods();
     swizzleZoomAndMiniaturize();
@@ -256,14 +262,13 @@ OSErr InjectQSX(const AppleEvent *ev, AppleEvent *reply, long refcon) {
                      @selector(QSX_hideButtons:),
                      @selector(QSX_chrome_hideButtons:)
                      );
-        return noErr;
     } else if ([bundleName isEqualToString:@"net.sourceforge.skim-app.skim"]) {
         jr_swizzleMethod(
                      NSClassFromString(@"SKApplication"),
                      @selector(updatePresentationOptionsForWindow:),
                      @selector(QSX_noOp:)
                      );
-        return noErr;
     }
+    swizzling_done = YES;
     return noErr;
 }

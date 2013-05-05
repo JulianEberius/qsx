@@ -10,33 +10,23 @@ extern NSString* const BORDERS_MODE;
 - (id)initWithContentRect:(NSRect)contentRect
                 styleMask:(NSUInteger)aStyle
                   backing:(NSBackingStoreType)bufferingType
-                    defer:(BOOL)flag
-                     mode:(NSString*)mode;
+                    defer:(BOOL)flag;
 - (void)clear;
-- (void)addRectangle:(NSRect)rect;
-- (void)addSecondaryRectangle:(NSRect)rect;
 - (void)addActiveBorder:(NSRect)rect;
 - (void)addBorder:(NSRect)rect;
-- (void)addArrowFrom:(NSPoint)start to:(NSPoint)end;
-- (void)addDebugArrowFrom:(NSPoint)start to:(NSPoint)end;
 - (void)setDebugEnabled:(BOOL)debug;
+- (void)flashMessage:(NSString*)msg;
 @end
 
 @interface QSXOverlayView: NSView
 {
-    NSMutableArray* rectangles;
-    NSMutableArray* secondaryRectangles;
     NSMutableArray* activeBorders;
     NSMutableArray* borders;
-    NSMutableArray* arrows;
-    NSMutableArray* debugArrows;
+    NSString* msg;
     BOOL debugEnabled;
 }
-@property(retain) NSMutableArray* rectangles;
-@property(retain) NSMutableArray* secondaryRectangles;
 @property(retain) NSMutableArray* activeBorders;
 @property(retain) NSMutableArray* borders;
-@property(retain) NSMutableArray* arrows;
-@property(retain) NSMutableArray* debugArrows;
+@property(retain) NSString* msg;
 @property(readwrite) BOOL debugEnabled;
 @end

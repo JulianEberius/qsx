@@ -3,11 +3,13 @@ This module provides wrappers around the objective-c model classes
 of QSX (QSXWindow, QSXApp, QSXWindowManager) to make them usable from Python/PyObjC
 '''
 
-from utils import config, BORDERLESS_APPS
+import utils
+from utils import BORDERLESS_APPS
 from Foundation import NSClassFromString, NSMakeRect
-from Foundation import NO
+from Foundation import NO, NSMakeRect
 from AppKit import NSApp, NSRunningApplication, NSBorderlessWindowMask, NSBackingStoreBuffered,\
     NSScreen
+from PyObjCTools.AppHelper import callLater
 
 QSXWindowManager = NSClassFromString("QSXWindowManager")
 QSXApp = NSClassFromString("QSXApp")
@@ -115,7 +117,7 @@ class Window(QSXWindow):
 
     def set_static(self, val):
         if val != self.is_static:
-            if self.app.name in config[BORDERLESS_APPS]:
+            if self.app.name in utils.config[BORDERLESS_APPS]:
                 self.setAccessibilityFlag_toValue_(
                     "QSXStaticBorderless", val)
             # elif self.app.identifier == "com.google.Chrome":
@@ -125,8 +127,7 @@ class Window(QSXWindow):
                     "QSXStatic", val)
             self.is_static = val
 
-    def toggle_lion_fullscreen(self):
-        # TODO: it's not a real toggle in the original sense of the word toggle
+    def hide_lion_fullscreen_button(self):
         if self.had_lion_fullscreen is None:
             self.had_lion_fullscreen = self.accessibilityFlag_("QSXIsLionFullscreenEnabled")
             self.setAccessibilityFlag_toValue_(
@@ -138,8 +139,13 @@ class Window(QSXWindow):
 
     def place(self, x, y, w, h, bw, bc):
         '''compatibility with qtile layouts'''
+        def place2():
+            self.move_to(x, y)
+            self.resize_to(w, h)
         self.move_to(x, y)
         self.resize_to(w, h)
+        # callLater(0.3, place2)
+
 
     def hide(self):
         '''compatibility with qtile layouts'''
@@ -180,9 +186,11 @@ class WindowManager(object):
 class Overlay(QSXOverlay):
 
     def initWithScreen_(self, screen):
-        self = super(Overlay, self).initWithContentRect_styleMask_backing_defer_mode_(
-                screen.frame(),
-                NSBorderlessWindowMask, NSBackingStoreBuffered, NO, "borders_mode")
+        sframe = screen.frame()
+        frame = NSMakeRect(sframe.origin.x, sframe.origin.y, sframe.size.width, sframe.size.height)
+        self = super(Overlay, self).initWithContentRect_styleMask_backing_defer_(
+                frame,
+                NSBorderlessWindowMask, NSBackingStoreBuffered, NO)
         self.makeKeyAndOrderFront_(NSApp)
         self.orderBack_(NSApp)
         return self
