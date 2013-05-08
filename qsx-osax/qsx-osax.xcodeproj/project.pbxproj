@@ -152,7 +152,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "TFROOT=\"$PROJECT_DIR\"\nTFBIN=\"$TFROOT/bin\"\n\nrm -rf \"$TFBIN/qsx.osax\"\nmkdir -p \"$TFBIN/qsx.osax\"\ncp -RLf \"$BUILT_PRODUCTS_DIR/qsx.osax/\" \"$TFBIN/qsx.osax\"\n\n# this scripts has to be put into /etc/sudoers to make it runnable without password\n# it moves the qsx.osax to /System/Library/ScriptingAdditions\n$PROJECT_DIR/move.sh\nexit 0";
+			shellScript = "TFROOT=\"$PROJECT_DIR\"\nTFBIN=\"$TFROOT/bin\"\n\nrm -rf \"$TFBIN/qsx.osax\"\nmkdir -p \"$TFBIN/qsx.osax\"\ncp -RLf \"$BUILT_PRODUCTS_DIR/qsx.osax/\" \"$TFBIN/qsx.osax\"\n\nexit 0";
 		};
 /* End PBXShellScriptBuildPhase section */
 

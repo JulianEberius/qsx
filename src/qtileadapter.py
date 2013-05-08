@@ -1,6 +1,7 @@
 from layouts.xmonad import MonadTall
 from layouts.stack import Stack
 from utils import notify
+from models import WindowManager
 from PyObjCTools.AppHelper import callLater
 
 class QTileGroupAdapter(object):
@@ -36,8 +37,7 @@ class QTileGroupAdapter(object):
         screen_frame = screen.frame();
         self.screen = QTileGroupAdapter.QTileScreen(
             screen_frame.origin.x,
-            # screen_frame.origin.y,
-            0,
+            WindowManager.real_y(screen),
             screen_frame.size.width,
             screen_frame.size.height)
         self.qtile = QTileGroupAdapter.QTileRootAdapter()

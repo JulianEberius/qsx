@@ -22,6 +22,10 @@ class QSX(NSObject):
         utils.load_config()
         return self
 
+    def test(self):
+        for w in self.active_group.layout.windows:
+            w.toggle_dim()
+
     def setup_observers(self):
         # reaction to layout changes
         NSNotificationCenter.defaultCenter().addObserver_selector_name_object_(
@@ -64,6 +68,8 @@ class QSX(NSObject):
         self.injected_apps = apps
 
         screens = models.WindowManager.screens()
+        for s in screens:
+            print s.frame()
 
         self.groups = []
         window_partitions = partition(windows, len(screens))
@@ -82,18 +88,32 @@ class QSX(NSObject):
         if target_group is None:
            target_group = self.active_group
         for g in self.groups:
-            ov = g.overlay
-            ov.clear()
             if g == target_group:
                 active_window = g.active_window
-                windows = [w for w in g.layout.windows if w is not active_window]
-                for w in windows:
-                    ov.addBorder_(w.frame)
-                ov.addActiveBorder_(active_window.frame)
+                other_windows = [w for w in g.layout.windows if w is not active_window]
+
+                for w in other_windows:
+                    w.set_dimmed(True)
+                active_window.set_dimmed(False)
             else:
                 for w in g.layout.windows:
-                    ov.addBorder_(w.frame)
+                    w.set_dimmed(True)
 
+    # def update_overlay(self, target_group=None):
+    #     if target_group is None:
+    #        target_group = self.active_group
+    #     for g in self.groups:
+    #         ov = g.overlay
+    #         ov.clear()
+    #         if g == target_group:
+    #             active_window = g.active_window
+    #             windows = [w for w in g.layout.windows if w is not active_window]
+    #             for w in windows:
+    #                 ov.addBorder_(w.frame)
+    #             ov.addActiveBorder_(active_window.frame)
+    #         else:
+    #             for w in g.layout.windows:
+    #                 ov.addBorder_(w.frame)
 
     @notification_receiver
     def newWindow_(self, window):

@@ -23,19 +23,27 @@
     return win;
 }
 
+- (int)realY:(NSScreen*)sc
+{
+    NSRect mainFrame = [[NSScreen mainScreen] frame];
+    NSRect scFrame = [sc frame];
+    return mainFrame.size.height - (scFrame.size.height+scFrame.origin.y);
+}
 
 - (void)addActiveBorder:(NSRect)rect
 {
-    NSRect sframe = [[self screen] frame];
-    rect.origin.x -= sframe.origin.x;
-    // rect.origin.y -= sframe.origin.y;
+    // NSRect sframe = [self frame];
+    // rect.origin.x -= sframe.size.width; // Betrag von?
+    // rect.origin.y -= sframe.size.height;
+    NSLog(@"frameRect = %@", NSStringFromRect(rect));
     [(QSXOverlayView*)[self contentView] addActiveBorder:rect];
 }
 - (void)addBorder:(NSRect)rect
 {
-    NSRect sframe = [[self screen] frame];
-    rect.origin.x -= sframe.origin.x;
-    // rect.origin.y -= sframe.origin.y;
+    // NSRect sframe = [self frame];
+    // rect.origin.x -= sframe.size.width;
+    // rect.origin.y -= sframe.size.height;
+    NSLog(@"frameRect = %@", NSStringFromRect(rect));
     [(QSXOverlayView*)[self contentView] addBorder:rect];
 }
 - (void)flashMessage:(NSString*)msg
@@ -85,13 +93,14 @@
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    [[NSColor colorWithCalibratedRed:0.7 green:0.7 blue:0.7 alpha:1.0] set];
-    [NSBezierPath setDefaultLineWidth:2];
-    [self strokeRectangles:self.activeBorders];
+    [[NSColor colorWithCalibratedRed:0.2 green:0.2 blue:0.2 alpha:1.0] set];
+    [NSBezierPath setDefaultLineWidth:4];
+    [self strokeRectangles:self.borders];
+    // [self fillRectangles:self.borders];
 
-    [[NSColor colorWithCalibratedRed:0.0 green:0.0 blue:0.0 alpha:0.5] set];
-    [NSBezierPath setDefaultLineWidth:2];
-    [self fillRectangles:self.borders];
+    [[NSColor colorWithCalibratedRed:0.8 green:0.8 blue:0.8 alpha:1.0] set];
+    [NSBezierPath setDefaultLineWidth:4];
+    [self strokeRectangles:self.activeBorders];
 
     if (self.msg != NULL) {
         NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont fontWithName:@"Helvetica" size:26], NSFontAttributeName,[NSColor redColor], NSForegroundColorAttributeName, nil];
@@ -101,6 +110,11 @@
     if (self.debugEnabled)
     {
     }
+
+    NSLog(@"ownFRAME = %@", NSStringFromRect([self frame]));
+    // [[NSColor colorWithCalibratedRed:0.8 green:0.0 blue:0.0 alpha:1.0] set];
+    // [NSBezierPath setDefaultLineWidth:1];
+    // [NSBezierPath strokeRect:[self frame]];
 }
 
 - (void)fillRectangles:(NSArray *)drawRectangles {

@@ -17,7 +17,7 @@ class QSXAppDelegate(NSObject):
 
     @IBAction
     def someTest_(self, sender):
-        pass
+        self.qsx.test()
 
     @IBAction
     def doStuff_(self, sender):

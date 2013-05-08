@@ -7,7 +7,8 @@
 */
 
 
-bool swizzling_done = NO;
+static bool swizzling_done = NO;
+static NSMutableDictionary *dimmingWindows = NULL;
 
 bool jr_swizzleMethod(Class clazz, SEL origSel_, SEL altSel_) {
     Method origMethod = class_getInstanceMethod(clazz, origSel_);
@@ -30,6 +31,25 @@ bool jr_swizzleMethod(Class clazz, SEL origSel_, SEL altSel_) {
                                    class_getInstanceMethod(clazz, altSel_));
     return YES;
 }
+
+@interface QSXInteralOverlayWindow: NSWindow
+@end
+
+@implementation QSXInteralOverlayWindow: NSWindow
+- (id)initWithContentRect:(NSRect)contentRect
+                styleMask:(NSUInteger)aStyle
+                  backing:(NSBackingStoreType)bufferingType
+                    defer:(BOOL)flag
+{
+    id win=[super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag];
+    [win setIgnoresMouseEvents:YES];
+    [win setLevel:NSFloatingWindowLevel];
+    [win setBackgroundColor:[NSColor colorWithCalibratedWhite:0.0 alpha:0.5]];
+    [win setOpaque:NO];
+    [win setHasShadow: NO];
+    return win;
+}
+@end
 
 @interface NSApplication (QSX)
 - (void)QSX_accessibilitySetValue:(id)value forAttribute:(NSString *)attribute;
@@ -155,6 +175,28 @@ bool jr_swizzleMethod(Class clazz, SEL origSel_, SEL altSel_) {
         [self QSX_makeStaticBorderless:[value boolValue]];
     } else if ([attribute isEqualToString:@"QSXSetLionFullscreenEnabled"]) {
         [self QSX_setLionFullscreenEnabled:[value boolValue]];
+    } else if ([attribute isEqualToString:@"QSXDimmedWindow"]) {
+        NSNumber *windowNumber = [NSNumber numberWithLong:[self windowNumber]];
+        NSLog(@"setting %@ to %@ kinda accessing it %@", windowNumber, value, dimmingWindows);
+        NSWindow *dimmer = [dimmingWindows objectForKey:windowNumber];
+
+        if ([value boolValue]) {
+            if (dimmer == nil) {
+                dimmer = [[QSXInteralOverlayWindow alloc]
+                    initWithContentRect:[self frame] styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO];
+                [dimmingWindows setObject:dimmer forKey:windowNumber];
+                [self addChildWindow:dimmer ordered:NSWindowAbove];
+                NSLog(@"creating new one %@", dimmingWindows);
+            }
+        }
+        else {
+            if (dimmer != nil) {
+               [self removeChildWindow:dimmer];
+               [dimmer close];
+               [dimmingWindows removeObjectForKey:windowNumber];
+               NSLog(@"removed one %@", dimmingWindows);
+            }
+        }
     } else {
         [self QSX_accessibilitySetValue:value forAttribute:attribute];
     }
@@ -167,6 +209,7 @@ bool jr_swizzleMethod(Class clazz, SEL origSel_, SEL altSel_) {
         || ([attribute isEqualToString:@"QSXStatic"])
         || ([attribute isEqualToString:@"QSXStaticBorderless"])
         || ([attribute isEqualToString:@"QSXSetLionFullscreenEnabled"])
+        || ([attribute isEqualToString:@"QSXDimmedWindow"])
         || ([attribute isEqualToString:@"QSXHighlighted"])) {
             result = true;
     } else {
@@ -247,12 +290,17 @@ void swizzleAccessibilityMethods()
 }
 
 OSErr InjectQSX(const AppleEvent *ev, AppleEvent *reply, long refcon) {
+
     if (swizzling_done)
         return noErr;
 
     swizzleAccessibilityMethods();
     swizzleZoomAndMiniaturize();
     swizzleCanBecomeMainAndKeyWindow();
+
+    dimmingWindows = [[NSMutableDictionary alloc] init];
+
+    NSLog(@"i created a cool dictionary %@", dimmingWindows);
 
     // treat special cases, should be moved later (using a plugin architecture)
     NSString* bundleName = [[NSBundle mainBundle] bundleIdentifier];

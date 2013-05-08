@@ -26,7 +26,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "27"
          endingLineNumber = "27"
-         landmarkName = "-addActiveBorder:"
+         landmarkName = "-realY:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -39,8 +39,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "80"
          endingLineNumber = "80"
-         landmarkName = "-drawRect:"
-         landmarkType = "5">
+         landmarkName = "msg"
+         landmarkType = "19">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

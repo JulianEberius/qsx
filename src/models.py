@@ -49,6 +49,7 @@ class Window(QSXWindow):
     def init(self):
         self = super(Window, self).init()
         self.is_static = False
+        self.dimmed = False
         self.had_lion_fullscreen = None
         self.layout = None
         return self
@@ -115,6 +116,17 @@ class Window(QSXWindow):
     def focus(self):
         self.focusWindow()
 
+    def toggle_dim(self):
+        self.dimmed = not self.dimmed
+        self.setAccessibilityFlag_toValue_(
+                "QSXDimmedWindow", self.dimmed)
+
+    def set_dimmed(self, value):
+        if value != self.dimmed:
+            self.dimmed = value
+            self.setAccessibilityFlag_toValue_(
+                    "QSXDimmedWindow", value)
+
     def set_static(self, val):
         if val != self.is_static:
             if self.app.name in utils.config[BORDERLESS_APPS]:
@@ -144,7 +156,8 @@ class Window(QSXWindow):
             self.resize_to(w, h)
         self.move_to(x, y)
         self.resize_to(w, h)
-        # callLater(0.3, place2)
+        # print "moving", self, "to x y", x, y
+        # callLater(0.5, place2)
 
 
     def hide(self):
@@ -183,11 +196,20 @@ class WindowManager(object):
     def screens(cls):
         return NSScreen.screens()
 
+    @classmethod
+    def real_y(cls, sc):
+        main_frame = NSScreen.mainScreen().frame()
+        sc_frame = sc.frame()
+        return main_frame.size.height - (sc_frame.size.height+sc_frame.origin.y)
+
+
 class Overlay(QSXOverlay):
 
     def initWithScreen_(self, screen):
         sframe = screen.frame()
+        # frame = NSMakeRect(sframe.origin.x, WindowManager.real_y(screen), sframe.size.width, sframe.size.height)
         frame = NSMakeRect(sframe.origin.x, sframe.origin.y, sframe.size.width, sframe.size.height)
+        print "creating overlay at", frame
         self = super(Overlay, self).initWithContentRect_styleMask_backing_defer_(
                 frame,
                 NSBorderlessWindowMask, NSBackingStoreBuffered, NO)
