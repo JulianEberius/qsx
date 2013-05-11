@@ -7,24 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040029F4136C656300D44C09 /* aem in Resources */ = {isa = PBXBuildFile; fileRef = 040029EE136C656300D44C09 /* aem */; };
-		040029F5136C656300D44C09 /* appscript in Resources */ = {isa = PBXBuildFile; fileRef = 040029EF136C656300D44C09 /* appscript */; };
-		040029F6136C656300D44C09 /* mactypes.py in Resources */ = {isa = PBXBuildFile; fileRef = 040029F0136C656300D44C09 /* mactypes.py */; };
-		040029F7136C656300D44C09 /* osax.py in Resources */ = {isa = PBXBuildFile; fileRef = 040029F1136C656300D44C09 /* osax.py */; };
 		041EBA011690E6000072E503 /* qtileadapter.py in Resources */ = {isa = PBXBuildFile; fileRef = 041EBA001690E6000072E503 /* qtileadapter.py */; };
 		041F052714F19FA5009C0F89 /* utils.py in Resources */ = {isa = PBXBuildFile; fileRef = 041F052614F19FA5009C0F89 /* utils.py */; };
-		04232FD91367F507009B585B /* SGHotKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 0451957013675F3B005B6132 /* SGHotKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04232FDA1367F507009B585B /* SGHotKeyCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0451957213675F3B005B6132 /* SGHotKeyCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04232FDB1367F507009B585B /* SGKeyCodeTranslator.h in Headers */ = {isa = PBXBuildFile; fileRef = 0451957413675F3B005B6132 /* SGKeyCodeTranslator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04232FDC1367F507009B585B /* SGKeyCombo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0451957613675F3B005B6132 /* SGKeyCombo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0428DE8316C7EBC400CEB09C /* qsx.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0428DE8116C7EBC400CEB09C /* qsx.icns */; };
 		0428DE8416C7EBC400CEB09C /* qsx.png in Resources */ = {isa = PBXBuildFile; fileRef = 0428DE8216C7EBC400CEB09C /* qsx.png */; };
-		0435EA6D136C69BA00CB55A6 /* SGHotKey-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0435EA69136C69BA00CB55A6 /* SGHotKey-Info.plist */; };
 		043BB20016625F9F00292585 /* apple_linen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 043BB1FF16625F9F00292585 /* apple_linen.jpg */; };
-		045195BA136763EB005B6132 /* SGHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451957113675F3B005B6132 /* SGHotKey.m */; };
-		045195BC136763EB005B6132 /* SGHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451957313675F3B005B6132 /* SGHotKeyCenter.m */; };
-		045195BE136763EB005B6132 /* SGKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451957513675F3B005B6132 /* SGKeyCodeTranslator.m */; };
-		045195C0136763EB005B6132 /* SGKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0451957713675F3B005B6132 /* SGKeyCombo.m */; };
 		045195C31367641D005B6132 /* SGHotKey.framework in Copy Files Frameworks */ = {isa = PBXBuildFile; fileRef = 045195AB136763B4005B6132 /* SGHotKey.framework */; };
 		045A0D171735A91100918237 /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 045A0D161735A91100918237 /* main.py */; };
 		049CA06615B0BD0800CBCBA1 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CA06415B0BD0000CBCBA1 /* Python.framework */; };
@@ -40,6 +27,18 @@
 		04CFEC5A17344A5900DD34D2 /* QSXOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFEC5417344A5900DD34D2 /* QSXOverlay.m */; };
 		04CFEC5B17344A5900DD34D2 /* QSXWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFEC5617344A5900DD34D2 /* QSXWindow.m */; };
 		04CFEC5C17344A5900DD34D2 /* QSXWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CFEC5817344A5900DD34D2 /* QSXWindowManager.m */; };
+		04E9F2DD173E98A5002A1A56 /* SGHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9F2D6173E98A5002A1A56 /* SGHotKey.m */; };
+		04E9F2DE173E98A5002A1A56 /* SGHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9F2D8173E98A5002A1A56 /* SGHotKeyCenter.m */; };
+		04E9F2DF173E98A5002A1A56 /* SGKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9F2DA173E98A5002A1A56 /* SGKeyCodeTranslator.m */; };
+		04E9F2E0173E98A5002A1A56 /* SGKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9F2DC173E98A5002A1A56 /* SGKeyCombo.m */; };
+		04E9F2E2173E98B3002A1A56 /* SGHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9F2D6173E98A5002A1A56 /* SGHotKey.m */; };
+		04E9F2E4173E98B3002A1A56 /* SGHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9F2D8173E98A5002A1A56 /* SGHotKeyCenter.m */; };
+		04E9F2E6173E98B3002A1A56 /* SGKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9F2DA173E98A5002A1A56 /* SGKeyCodeTranslator.m */; };
+		04E9F2E8173E98B3002A1A56 /* SGKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9F2DC173E98A5002A1A56 /* SGKeyCombo.m */; };
+		04E9F2ED173E9937002A1A56 /* aem in Resources */ = {isa = PBXBuildFile; fileRef = 04E9F2E9173E9937002A1A56 /* aem */; };
+		04E9F2EE173E9937002A1A56 /* appscript in Resources */ = {isa = PBXBuildFile; fileRef = 04E9F2EA173E9937002A1A56 /* appscript */; };
+		04E9F2EF173E9937002A1A56 /* mactypes.py in Resources */ = {isa = PBXBuildFile; fileRef = 04E9F2EB173E9937002A1A56 /* mactypes.py */; };
+		04E9F2F0173E9937002A1A56 /* osax.py in Resources */ = {isa = PBXBuildFile; fileRef = 04E9F2EC173E9937002A1A56 /* osax.py */; };
 		04EE6F53173708F200BA5198 /* layouts in Resources */ = {isa = PBXBuildFile; fileRef = 04EE6F52173708F200BA5198 /* layouts */; };
 		77C8C1F90C07829500965286 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C8C1F70C07829500965286 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -77,26 +76,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		040029EE136C656300D44C09 /* aem */ = {isa = PBXFileReference; lastKnownFileType = folder; name = aem; path = python_libs/aem; sourceTree = "<group>"; };
-		040029EF136C656300D44C09 /* appscript */ = {isa = PBXFileReference; lastKnownFileType = folder; name = appscript; path = python_libs/appscript; sourceTree = "<group>"; };
-		040029F0136C656300D44C09 /* mactypes.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = mactypes.py; path = python_libs/mactypes.py; sourceTree = "<group>"; };
-		040029F1136C656300D44C09 /* osax.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = osax.py; path = python_libs/osax.py; sourceTree = "<group>"; };
 		04193EB2136C6F6F00A5AE4D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		041EBA001690E6000072E503 /* qtileadapter.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = qtileadapter.py; path = src/qtileadapter.py; sourceTree = "<group>"; };
 		041F052614F19FA5009C0F89 /* utils.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = utils.py; path = src/utils.py; sourceTree = "<group>"; };
 		0428DE8116C7EBC400CEB09C /* qsx.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = qsx.icns; path = Resources/qsx.icns; sourceTree = "<group>"; };
 		0428DE8216C7EBC400CEB09C /* qsx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = qsx.png; path = Resources/qsx.png; sourceTree = "<group>"; };
-		0435EA69136C69BA00CB55A6 /* SGHotKey-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SGHotKey-Info.plist"; path = "Libraries/SGHotKey-Info.plist"; sourceTree = "<group>"; };
-		0435EA6A136C69BA00CB55A6 /* SGHotKey-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SGHotKey-Prefix.pch"; path = "Libraries/SGHotKey-Prefix.pch"; sourceTree = "<group>"; };
 		043BB1FF16625F9F00292585 /* apple_linen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = apple_linen.jpg; path = Resources/apple_linen.jpg; sourceTree = "<group>"; };
-		0451957013675F3B005B6132 /* SGHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHotKey.h; sourceTree = "<group>"; };
-		0451957113675F3B005B6132 /* SGHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHotKey.m; sourceTree = "<group>"; };
-		0451957213675F3B005B6132 /* SGHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHotKeyCenter.h; sourceTree = "<group>"; };
-		0451957313675F3B005B6132 /* SGHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHotKeyCenter.m; sourceTree = "<group>"; };
-		0451957413675F3B005B6132 /* SGKeyCodeTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGKeyCodeTranslator.h; sourceTree = "<group>"; };
-		0451957513675F3B005B6132 /* SGKeyCodeTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGKeyCodeTranslator.m; sourceTree = "<group>"; };
-		0451957613675F3B005B6132 /* SGKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGKeyCombo.h; sourceTree = "<group>"; };
-		0451957713675F3B005B6132 /* SGKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGKeyCombo.m; sourceTree = "<group>"; };
 		045195AB136763B4005B6132 /* SGHotKey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SGHotKey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		045A0D161735A91100918237 /* main.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = main.py; path = src/main.py; sourceTree = "<group>"; };
 		049CA06015B0BCED00CBCBA1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
@@ -115,6 +100,18 @@
 		04CFEC5617344A5900DD34D2 /* QSXWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSXWindow.m; sourceTree = "<group>"; };
 		04CFEC5717344A5900DD34D2 /* QSXWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSXWindowManager.h; sourceTree = "<group>"; };
 		04CFEC5817344A5900DD34D2 /* QSXWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSXWindowManager.m; sourceTree = "<group>"; };
+		04E9F2D5173E98A5002A1A56 /* SGHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHotKey.h; sourceTree = "<group>"; };
+		04E9F2D6173E98A5002A1A56 /* SGHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHotKey.m; sourceTree = "<group>"; };
+		04E9F2D7173E98A5002A1A56 /* SGHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHotKeyCenter.h; sourceTree = "<group>"; };
+		04E9F2D8173E98A5002A1A56 /* SGHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHotKeyCenter.m; sourceTree = "<group>"; };
+		04E9F2D9173E98A5002A1A56 /* SGKeyCodeTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGKeyCodeTranslator.h; sourceTree = "<group>"; };
+		04E9F2DA173E98A5002A1A56 /* SGKeyCodeTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGKeyCodeTranslator.m; sourceTree = "<group>"; };
+		04E9F2DB173E98A5002A1A56 /* SGKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGKeyCombo.h; sourceTree = "<group>"; };
+		04E9F2DC173E98A5002A1A56 /* SGKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGKeyCombo.m; sourceTree = "<group>"; };
+		04E9F2E9173E9937002A1A56 /* aem */ = {isa = PBXFileReference; lastKnownFileType = folder; name = aem; path = Libraries/aem; sourceTree = "<group>"; };
+		04E9F2EA173E9937002A1A56 /* appscript */ = {isa = PBXFileReference; lastKnownFileType = folder; name = appscript; path = Libraries/appscript; sourceTree = "<group>"; };
+		04E9F2EB173E9937002A1A56 /* mactypes.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = mactypes.py; path = Libraries/mactypes.py; sourceTree = "<group>"; };
+		04E9F2EC173E9937002A1A56 /* osax.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = osax.py; path = Libraries/osax.py; sourceTree = "<group>"; };
 		04EE6F52173708F200BA5198 /* layouts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = layouts; path = src/layouts; sourceTree = "<group>"; };
 		04EF732616C7E7FA000E3EDF /* qsx-osax.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "qsx-osax.xcodeproj"; path = "qsx-osax/qsx-osax.xcodeproj"; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -147,43 +144,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04193EA5136C6D2E00A5AE4D /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				0451956F13675F3B005B6132 /* SGHotKeysLib */,
-				0435EA69136C69BA00CB55A6 /* SGHotKey-Info.plist */,
-				0435EA6A136C69BA00CB55A6 /* SGHotKey-Prefix.pch */,
-			);
-			name = Libraries;
-			sourceTree = "<group>";
-		};
-		0451956F13675F3B005B6132 /* SGHotKeysLib */ = {
-			isa = PBXGroup;
-			children = (
-				0451957013675F3B005B6132 /* SGHotKey.h */,
-				0451957113675F3B005B6132 /* SGHotKey.m */,
-				0451957213675F3B005B6132 /* SGHotKeyCenter.h */,
-				0451957313675F3B005B6132 /* SGHotKeyCenter.m */,
-				0451957413675F3B005B6132 /* SGKeyCodeTranslator.h */,
-				0451957513675F3B005B6132 /* SGKeyCodeTranslator.m */,
-				0451957613675F3B005B6132 /* SGKeyCombo.h */,
-				0451957713675F3B005B6132 /* SGKeyCombo.m */,
-			);
-			name = SGHotKeysLib;
-			path = Libraries/SGHotKeysLib/SGHotKeysLib;
-			sourceTree = "<group>";
-		};
-		045783FD1358AA4B0059BA1F /* PythonLibs */ = {
-			isa = PBXGroup;
-			children = (
-				040029EE136C656300D44C09 /* aem */,
-				040029EF136C656300D44C09 /* appscript */,
-				040029F0136C656300D44C09 /* mactypes.py */,
-				040029F1136C656300D44C09 /* osax.py */,
-			);
-			name = PythonLibs;
-			sourceTree = "<group>";
-		};
 		04CFEC4F17344A5900DD34D2 /* objc */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +161,42 @@
 			path = src/objc;
 			sourceTree = "<group>";
 		};
+		04E9F2D2173E9885002A1A56 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				04E9F2E9173E9937002A1A56 /* aem */,
+				04E9F2EA173E9937002A1A56 /* appscript */,
+				04E9F2EB173E9937002A1A56 /* mactypes.py */,
+				04E9F2EC173E9937002A1A56 /* osax.py */,
+				04E9F2D3173E988E002A1A56 /* SGHotkeysLib */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		04E9F2D3173E988E002A1A56 /* SGHotkeysLib */ = {
+			isa = PBXGroup;
+			children = (
+				04E9F2D4173E98A5002A1A56 /* SGHotKeysLib */,
+			);
+			name = SGHotkeysLib;
+			sourceTree = "<group>";
+		};
+		04E9F2D4173E98A5002A1A56 /* SGHotKeysLib */ = {
+			isa = PBXGroup;
+			children = (
+				04E9F2D5173E98A5002A1A56 /* SGHotKey.h */,
+				04E9F2D6173E98A5002A1A56 /* SGHotKey.m */,
+				04E9F2D7173E98A5002A1A56 /* SGHotKeyCenter.h */,
+				04E9F2D8173E98A5002A1A56 /* SGHotKeyCenter.m */,
+				04E9F2D9173E98A5002A1A56 /* SGKeyCodeTranslator.h */,
+				04E9F2DA173E98A5002A1A56 /* SGKeyCodeTranslator.m */,
+				04E9F2DB173E98A5002A1A56 /* SGKeyCombo.h */,
+				04E9F2DC173E98A5002A1A56 /* SGKeyCombo.m */,
+			);
+			name = SGHotKeysLib;
+			path = Libraries/SGHotkeysLib/SGHotKeysLib;
+			sourceTree = "<group>";
+		};
 		04EF732716C7E7FA000E3EDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,7 +205,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		080E96DDFE201D6D7F000001 /* Classes */ = {
+		080E96DDFE201D6D7F000001 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				04EE6F52173708F200BA5198 /* layouts */,
@@ -222,7 +218,7 @@
 				04CBFABA17358429007A5864 /* models.py */,
 				04CBFABB17358429007A5864 /* qsx.py */,
 			);
-			name = Classes;
+			name = Sources;
 			sourceTree = "<group>";
 		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
@@ -256,13 +252,12 @@
 		29B97314FDCFA39411CA2CEA /* AweSX */ = {
 			isa = PBXGroup;
 			children = (
-				04EF732616C7E7FA000E3EDF /* qsx-osax.xcodeproj */,
-				04193EA5136C6D2E00A5AE4D /* Libraries */,
-				045783FD1358AA4B0059BA1F /* PythonLibs */,
-				080E96DDFE201D6D7F000001 /* Classes */,
+				04E9F2D2173E9885002A1A56 /* Libraries */,
+				080E96DDFE201D6D7F000001 /* Sources */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				04EF732616C7E7FA000E3EDF /* qsx-osax.xcodeproj */,
 			);
 			name = AweSX;
 			sourceTree = "<group>";
@@ -304,10 +299,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04232FD91367F507009B585B /* SGHotKey.h in Headers */,
-				04232FDA1367F507009B585B /* SGHotKeyCenter.h in Headers */,
-				04232FDB1367F507009B585B /* SGKeyCodeTranslator.h in Headers */,
-				04232FDC1367F507009B585B /* SGKeyCombo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,11 +402,6 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				77C8C1F90C07829500965286 /* MainMenu.xib in Resources */,
-				040029F4136C656300D44C09 /* aem in Resources */,
-				040029F5136C656300D44C09 /* appscript in Resources */,
-				040029F6136C656300D44C09 /* mactypes.py in Resources */,
-				040029F7136C656300D44C09 /* osax.py in Resources */,
-				0435EA6D136C69BA00CB55A6 /* SGHotKey-Info.plist in Resources */,
 				04B0C22E14EEB925006746A1 /* hotkeys.py in Resources */,
 				041F052714F19FA5009C0F89 /* utils.py in Resources */,
 				043BB20016625F9F00292585 /* apple_linen.jpg in Resources */,
@@ -427,6 +413,10 @@
 				04CBFABE17358429007A5864 /* qsx.py in Resources */,
 				045A0D171735A91100918237 /* main.py in Resources */,
 				04EE6F53173708F200BA5198 /* layouts in Resources */,
+				04E9F2ED173E9937002A1A56 /* aem in Resources */,
+				04E9F2EE173E9937002A1A56 /* appscript in Resources */,
+				04E9F2EF173E9937002A1A56 /* mactypes.py in Resources */,
+				04E9F2F0173E9937002A1A56 /* osax.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,10 +427,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				045195BA136763EB005B6132 /* SGHotKey.m in Sources */,
-				045195BC136763EB005B6132 /* SGHotKeyCenter.m in Sources */,
-				045195BE136763EB005B6132 /* SGKeyCodeTranslator.m in Sources */,
-				045195C0136763EB005B6132 /* SGKeyCombo.m in Sources */,
+				04E9F2E2173E98B3002A1A56 /* SGHotKey.m in Sources */,
+				04E9F2E4173E98B3002A1A56 /* SGHotKeyCenter.m in Sources */,
+				04E9F2E6173E98B3002A1A56 /* SGKeyCodeTranslator.m in Sources */,
+				04E9F2E8173E98B3002A1A56 /* SGKeyCombo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +442,10 @@
 				04CFEC5A17344A5900DD34D2 /* QSXOverlay.m in Sources */,
 				04CFEC5B17344A5900DD34D2 /* QSXWindow.m in Sources */,
 				04CFEC5C17344A5900DD34D2 /* QSXWindowManager.m in Sources */,
+				04E9F2DD173E98A5002A1A56 /* SGHotKey.m in Sources */,
+				04E9F2DE173E98A5002A1A56 /* SGHotKeyCenter.m in Sources */,
+				04E9F2DF173E98A5002A1A56 /* SGKeyCodeTranslator.m in Sources */,
+				04E9F2E0173E98A5002A1A56 /* SGKeyCombo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

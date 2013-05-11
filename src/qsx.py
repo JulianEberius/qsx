@@ -205,10 +205,11 @@ class QSX(NSObject):
         groupA.layout.remove_window(window)
         groupB.layout.add_window(window)
         # TODO: calling second focus later is a "cheap" solution, not guaranteed to work
+        # maybe event suppression works
         def focus_new_group():
             groupB.layout.focus_window(window)
             self.active_group = groupB
-        callLater(0.3, focus_new_group)
+        callLater(0.2, focus_new_group)
 
     def toNextGroup_(self, sender):
         groupA = self.active_group
@@ -241,6 +242,7 @@ class QSX(NSObject):
             for w in g.layout.windows:
                 w.set_static(False)
                 w.hide_lion_fullscreen_button()
+                w.set_dimmed(False)
 
         still_running_apps = models.WindowManager.still_running(self.injected_apps)
         for a in still_running_apps:

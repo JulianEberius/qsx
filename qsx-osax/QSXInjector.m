@@ -44,7 +44,7 @@ bool jr_swizzleMethod(Class clazz, SEL origSel_, SEL altSel_) {
     id win=[super initWithContentRect:contentRect styleMask:aStyle backing:bufferingType defer:flag];
     [win setIgnoresMouseEvents:YES];
     [win setLevel:NSFloatingWindowLevel];
-    [win setBackgroundColor:[NSColor colorWithCalibratedWhite:0.0 alpha:0.5]];
+    [win setBackgroundColor:[NSColor colorWithCalibratedWhite:0.0 alpha:0.3]];
     [win setOpaque:NO];
     [win setHasShadow: NO];
     return win;
@@ -177,7 +177,6 @@ bool jr_swizzleMethod(Class clazz, SEL origSel_, SEL altSel_) {
         [self QSX_setLionFullscreenEnabled:[value boolValue]];
     } else if ([attribute isEqualToString:@"QSXDimmedWindow"]) {
         NSNumber *windowNumber = [NSNumber numberWithLong:[self windowNumber]];
-        NSLog(@"setting %@ to %@ kinda accessing it %@", windowNumber, value, dimmingWindows);
         NSWindow *dimmer = [dimmingWindows objectForKey:windowNumber];
 
         if ([value boolValue]) {
@@ -186,7 +185,6 @@ bool jr_swizzleMethod(Class clazz, SEL origSel_, SEL altSel_) {
                     initWithContentRect:[self frame] styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO];
                 [dimmingWindows setObject:dimmer forKey:windowNumber];
                 [self addChildWindow:dimmer ordered:NSWindowAbove];
-                NSLog(@"creating new one %@", dimmingWindows);
             }
         }
         else {
@@ -194,7 +192,6 @@ bool jr_swizzleMethod(Class clazz, SEL origSel_, SEL altSel_) {
                [self removeChildWindow:dimmer];
                [dimmer close];
                [dimmingWindows removeObjectForKey:windowNumber];
-               NSLog(@"removed one %@", dimmingWindows);
             }
         }
     } else {
